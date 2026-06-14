@@ -30,16 +30,16 @@
             <span class="material-symbols-outlined text-3xl text-tertiary">event</span>
             <span class="font-label-caps text-label-caps text-on-surface-variant">Kegiatan</span>
         </div>
-        <p class="font-display-lg text-display-lg-mobile text-tertiary font-black">0</p>
+        <p class="font-display-lg text-display-lg-mobile text-tertiary font-black">{{ $totalKegiatan ?? 0 }}</p>
         <p class="font-body-sm text-on-surface-variant mt-1">Total Kegiatan</p>
     </div>
     <div class="bg-surface rounded-lg border-2 border-outline p-6">
         <div class="flex items-center justify-between mb-4">
-            <span class="material-symbols-outlined text-3xl text-primary">article</span>
-            <span class="font-label-caps text-label-caps text-on-surface-variant">Berita</span>
+            <span class="material-symbols-outlined text-3xl text-secondary">folder</span>
+            <span class="font-label-caps text-label-caps text-on-surface-variant">Administrasi</span>
         </div>
-        <p class="font-display-lg text-display-lg-mobile text-primary font-black">0</p>
-        <p class="font-body-sm text-on-surface-variant mt-1">Total Berita</p>
+        <p class="font-display-lg text-display-lg-mobile text-secondary font-black">{{ $totalAdministrasi ?? 0 }}</p>
+        <p class="font-body-sm text-on-surface-variant mt-1">Total Administrasi</p>
     </div>
 </div>
 
@@ -66,17 +66,24 @@
         </div>
     </div>
     <div class="bg-surface rounded-lg border-2 border-outline p-6">
-        <h2 class="font-title-sm text-primary uppercase mb-4">Aktivitas Terkini</h2>
+        <h2 class="font-title-sm text-primary uppercase mb-4">Kegiatan Terbaru</h2>
         <div class="space-y-3">
-            <div class="flex items-center gap-3 py-2 border-b border-outline-variant last:border-0">
-                <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
-                    <span class="material-symbols-outlined text-lg text-on-secondary-container">login</span>
+            @if(isset($recentKegiatan) && $recentKegiatan->count())
+                @foreach($recentKegiatan as $kegiatan)
+                <div class="flex items-center gap-3 py-2 border-b border-outline-variant last:border-0">
+                    <div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center">
+                        <span class="material-symbols-outlined text-lg text-on-tertiary-container">event</span>
+                    </div>
+                    <div class="flex-1">
+                        <p class="font-title-sm text-sm text-on-surface">{{ $kegiatan->judul }}</p>
+                        <p class="font-body-sm text-xs text-on-surface-variant">{{ $kegiatan->tanggal->format('d M Y') }} · {{ $kegiatan->lokasi }}</p>
+                    </div>
+                    <span class="font-label-caps text-label-caps text-on-surface-variant">{{ $kegiatan->created_at->diffForHumans() }}</span>
                 </div>
-                <div class="flex-1">
-                    <p class="font-title-sm text-sm text-on-surface">Pengguna masuk</p>
-                    <p class="font-body-sm text-xs text-on-surface-variant">Belum ada aktivitas.</p>
-                </div>
-            </div>
+                @endforeach
+            @else
+                <p class="font-body-sm text-on-surface-variant">Belum ada kegiatan.</p>
+            @endif
         </div>
     </div>
 </div>

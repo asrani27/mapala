@@ -48,8 +48,14 @@ class AuthController extends Controller
     {
         $totalAnggota = \App\Models\Anggota::count();
         $totalAdmin = \App\Models\User::where('role', 'Admin')->count();
+        $totalKegiatan = \App\Models\Kegiatan::count();
+        $totalAdministrasi = \App\Models\Administrasi::count();
         $recentAnggota = \App\Models\Anggota::latest()->take(5)->get();
+        $recentKegiatan = \App\Models\Kegiatan::latest()->take(5)->get();
 
-        return view('admin.dashboard', compact('totalAnggota', 'totalAdmin', 'recentAnggota'));
+        return view('admin.dashboard', compact(
+            'totalAnggota', 'totalAdmin', 'totalKegiatan', 'totalAdministrasi',
+            'recentAnggota', 'recentKegiatan'
+        ));
     }
 }
