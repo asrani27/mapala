@@ -110,6 +110,7 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         .shadow-none-tactile {
             box-shadow: 3px 3px 0 0 theme('colors.primary');
         }
@@ -123,16 +124,12 @@
         class="bg-surface border-b-2 border-outline flex justify-between items-center px-margin-desktop py-base w-full max-w-container-max mx-auto sticky top-0 z-50">
         <div class="flex items-center gap-4">
             <a href="/">
-                <span class="font-display-lg text-title-sm font-black text-primary">MAPALA</span>
+                <span class="font-display-lg text-title-sm font-black text-primary">IWAPALAMIKA</span>
             </a>
         </div>
         <div class="hidden md:flex gap-gutter items-center">
             <a class="text-on-surface-variant hover:text-primary transition-colors font-title-sm text-title-sm"
                 href="/">Home</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-title-sm text-title-sm"
-                href="/">Kegiatan</a>
-            <a class="text-on-surface-variant hover:text-primary transition-colors font-title-sm text-title-sm"
-                href="/">Anggota</a>
         </div>
     </nav>
 
@@ -154,14 +151,17 @@
 
                 <!-- Username -->
                 <div>
-                    <label for="username" class="font-label-caps text-label-caps text-primary mb-2 block">Nama Pengguna</label>
-                    <input type="text" id="username" name="username" value="{{ old('username') }}" required autocomplete="username"
+                    <label for="username" class="font-label-caps text-label-caps text-primary mb-2 block">Nama
+                        Pengguna</label>
+                    <input type="text" id="username" name="username" value="{{ old('username') }}" required
+                        autocomplete="username"
                         class="w-full px-4 py-3 bg-surface-container-lowest border-2 border-outline rounded-lg font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all @error('username') border-error @enderror" />
                 </div>
 
                 <!-- Password -->
                 <div>
-                    <label for="password" class="font-label-caps text-label-caps text-primary mb-2 block">Kata Sandi</label>
+                    <label for="password" class="font-label-caps text-label-caps text-primary mb-2 block">Kata
+                        Sandi</label>
                     <input type="password" id="password" name="password" required
                         class="w-full px-4 py-3 bg-surface-container-lowest border-2 border-outline rounded-lg font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all @error('password') border-error @enderror" />
                 </div>
@@ -173,7 +173,7 @@
                             class="accent-primary w-4 h-4 border-2 border-outline rounded" />
                         <span class="font-body-sm text-on-surface-variant">Ingat saya</span>
                     </label>
-                    <a href="#" class="font-body-sm text-primary hover:underline">Lupa kata sandi?</a>
+
                 </div>
 
                 <!-- Submit -->
@@ -182,12 +182,6 @@
                     Masuk
                 </button>
             </form>
-
-            <!-- Register link -->
-            <p class="text-center mt-8 font-body-sm text-on-surface-variant">
-                Belum punya akun?
-                <a href="#" class="text-primary font-bold hover:underline">Daftar di sini</a>
-            </p>
         </div>
     </main>
 
@@ -196,15 +190,10 @@
         <div class="max-w-container-max mx-auto px-margin-desktop py-gutter">
             <div
                 class="flex flex-col md:flex-row justify-between items-center pt-gutter border-t border-outline-variant gap-4">
-                <p class="font-body-sm text-on-surface-variant text-center md:text-left">&copy; 2024 MAPALA Community. Built
-                    for the wild.</p>
+                <p class="font-body-sm text-on-surface-variant text-center md:text-left">&copy; 2026 IWAPALAMIKA.</p>
                 <div class="flex gap-6">
-                    <a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span
-                            class="material-symbols-outlined">public</span></a>
-                    <a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span
-                            class="material-symbols-outlined">mail</span></a>
-                    <a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span
-                            class="material-symbols-outlined">share</span></a>
+
+
                 </div>
             </div>
         </div>

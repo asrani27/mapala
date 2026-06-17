@@ -16,7 +16,7 @@
 </div>
 
 @if(session('success'))
-<div class="mb-6 bg-primary-container border-2 border-primary rounded-lg p-4 flex items-center gap-3">
+<div id="successAlert" class="mb-6 bg-primary-container border-2 border-primary rounded-lg p-4 flex items-center gap-3">
     <span class="material-symbols-outlined text-primary">check_circle</span>
     <p class="font-body-sm text-on-primary-container">{{ session('success') }}</p>
 </div>
@@ -155,7 +155,7 @@
         document.getElementById('deleteModal').classList.add('hidden');
     }
     setTimeout(() => {
-        const alert = document.querySelector('.bg-primary-container');
+        const alert = document.getElementById('successAlert');
         if (alert) alert.style.display = 'none';
     }, 5000);
 </script>

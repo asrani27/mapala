@@ -11,7 +11,9 @@ use App\Http\Controllers\KeuanganController;
 use App\Http\Controllers\LaporanController;
 
 Route::get('/', function () {
-    return view('welcome');
+    $kegiatan = \App\Models\Kegiatan::where('status', 'Aktif')->latest()->get();
+    $pengurus = \App\Models\Pengurus::with('anggota')->where('status', 'Aktif')->latest()->get();
+    return view('welcome', compact('kegiatan', 'pengurus'));
 });
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
