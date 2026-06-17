@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>MAPALA Portal - Jelajahi Alam, Lindungi Masa Depan</title>
+    <title>IWAPALAMIKA Portal - Jelajahi Alam, Lindungi Masa Depan</title>
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
@@ -249,12 +249,6 @@
                     </div>
                     @endforelse
                 </div>
-                <div class="text-center mt-12">
-                    <a href="#"
-                        class="inline-block bg-primary text-on-primary px-10 py-4 font-title-sm text-title-sm rounded-lg shadow-none-tactile border-2 border-primary hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
-                        Lihat Semua Anggota
-                    </a>
-                </div>
             </div>
         </section>
 
@@ -266,7 +260,7 @@
                 <div class="max-w-sm">
                     <div class="flex items-center gap-4 mb-6">
 
-                        <span class="font-title-sm text-title-sm font-bold text-primary">MAPALA Portal</span>
+                        <span class="font-title-sm text-title-sm font-bold text-primary">IWAPALAMIKA Portal</span>
                     </div>
                     <p class="font-body-sm text-on-surface-variant">
                         Membangun generasi pemimpin masa depan yang berwawasan lingkungan dan memiliki ketangguhan fisik
@@ -315,8 +309,7 @@
             </div>
             <div
                 class="flex flex-col md:flex-row justify-between items-center pt-gutter border-t border-outline-variant gap-4">
-                <p class="font-body-sm text-on-surface-variant text-center md:text-left">© 2024 MAPALA Community. Built
-                    for the wild.</p>
+                <p class="font-body-sm text-on-surface-variant text-center md:text-left">© 2026 MAPALA Community..</p>
                 <div class="flex gap-6">
                     <a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span
                             class="material-symbols-outlined">public</span></a>
@@ -331,22 +324,8 @@
     <!-- Mobile Nav Anchor -->
     <div
         class="md:hidden fixed bottom-0 left-0 right-0 bg-surface border-t-2 border-outline z-[100] flex justify-around items-center py-4 px-4">
-        <a class="flex flex-col items-center gap-1 text-primary" href="#">
-            <span class="material-symbols-outlined" data-weight="fill">home</span>
-            <span class="text-[10px] font-label-caps">HOME</span>
-        </a>
-        <a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
-            <span class="material-symbols-outlined">terrain</span>
-            <span class="text-[10px] font-label-caps">HIKE</span>
-        </a>
-        <a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
-            <span class="material-symbols-outlined">eco</span>
-            <span class="text-[10px] font-label-caps">ECO</span>
-        </a>
-        <a class="flex flex-col items-center gap-1 text-on-surface-variant" href="#">
-            <span class="material-symbols-outlined">group</span>
-            <span class="text-[10px] font-label-caps">JOIN</span>
-        </a>
+
+
     </div>
 </body>
 
