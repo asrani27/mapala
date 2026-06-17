@@ -22,6 +22,11 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware('auth')->group(function () {
     Route::get('/admin/dashboard', [AuthController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/anggota/dashboard', [AuthController::class, 'anggotaDashboard'])->name('anggota.dashboard');
+    Route::get('/anggota/profil', [AuthController::class, 'profil'])->name('anggota.profil');
+    Route::get('/anggota/profil/edit', [AuthController::class, 'editProfil'])->name('anggota.profil.edit');
+    Route::put('/anggota/profil', [AuthController::class, 'updateProfil'])->name('anggota.profil.update');
+    Route::get('/anggota/informasi-kegiatan', [AuthController::class, 'informasiKegiatan'])->name('anggota.informasi-kegiatan');
 
     Route::resource('/admin/user', UserController::class)->names([
         'index' => 'admin.user.index',
